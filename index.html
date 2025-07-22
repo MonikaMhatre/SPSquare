@@ -1,0 +1,2089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SPSquare Consultancy - Empowering Businesses through Strategic HR Consulting. Expert hiring, recruitment, HRM software solutions, and HR policy design.">
+    <meta name="keywords" content="HR consultancy, recruitment, hiring, HRM software, HR policy design, human resources">
+    <meta name="author" content="SPSquare Consultancy">
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <title>SPSquare Consultancy - Strategic HR Solutions</title>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #1a1a2e;
+            --primary-blue: #16213e;
+            --accent-purple: #6c5ce7;
+            --accent-pink: #fd79a8;
+            --accent-cyan: #00cec9;
+            --accent-green: #00b894;
+            --text-light: #e17055;
+            --text-dark: #2d3436;
+            --text-muted: #636e72;
+            --white: #ffffff;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --gradient-primary: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 50%, #fd79a8 100%);
+            --gradient-secondary: linear-gradient(135deg, #00cec9 0%, #00b894 100%);
+            --gradient-dark: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --shadow-primary: 0 20px 40px rgba(108, 92, 231, 0.15);
+            --shadow-secondary: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-secondary);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 80%;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-purple);
+            background: var(--glass-bg);
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--accent-purple);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu:hover {
+            background: var(--glass-bg);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-dark);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(108,92,231,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            width: 400px;
+            height: 400px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            opacity: 0.1;
+            filter: blur(100px);
+        }
+
+        .hero-content {
+            color: var(--white);
+            max-width: 600px;
+            z-index: 2;
+            position: relative;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            background: linear-gradient(135deg, #ffffff 0%, #a29bfe 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-weight: 300;
+            color: #e0e0e0;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 1.2rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-primary);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 25px 50px rgba(108, 92, 231, 0.3);
+        }
+
+        .hero-visual {
+            position: absolute;
+            right: -5%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.05;
+            font-size: 25rem;
+            color: var(--white);
+            z-index: 1;
+        }
+
+        /* Sections */
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            font-weight: 700;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            position: relative;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(108,92,231,0.1)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+        }
+
+        .about-text h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .about-text h3 i {
+            color: var(--accent-purple);
+            font-size: 1.5rem;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            box-shadow: var(--shadow-secondary);
+            transition: all 0.3s ease;
+            border: 1px solid var(--glass-border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-primary);
+        }
+
+        .stat-item i {
+            font-size: 2.5rem;
+            color: var(--accent-purple);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--white);
+            position: relative;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: -10%;
+            width: 300px;
+            height: 300px;
+            background: var(--gradient-secondary);
+            border-radius: 50%;
+            opacity: 0.05;
+            filter: blur(100px);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            padding: 3rem 2.5rem;
+            border-radius: 25px;
+            box-shadow: var(--shadow-secondary);
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: var(--shadow-primary);
+        }
+
+        .service-icon {
+            font-size: 4rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 2rem;
+            display: block;
+            position: relative;
+        }
+
+        .service-icon::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .service-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+            text-align: left;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .service-features li i {
+            color: var(--accent-green);
+            font-size: 1rem;
+            width: 16px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--gradient-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 800px;
+            height: 800px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            opacity: 0.05;
+            filter: blur(150px);
+        }
+
+        .testimonials .section-title h2 {
+            color: var(--white);
+        }
+
+        .testimonials .section-title p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonial-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-secondary);
+            position: relative;
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-primary);
+        }
+
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 25px;
+            width: 30px;
+            height: 30px;
+            background: var(--accent-pink);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .testimonial-card::after {
+            content: '"';
+            position: absolute;
+            top: -25px;
+            left: 32px;
+            font-size: 1.2rem;
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 2px solid var(--glass-border);
+        }
+
+        .author-info h4 {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .author-info p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Industries Section */
+        .industries {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 8rem 0;
+        }
+
+        .industries::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(108,92,231,0.15) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .industries::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,206,201,0.1) 0%, transparent 70%);
+            animation: float 25s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+        }
+
+        .industries .section-title h2 {
+            color: #ffffff;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #a29bfe 50%, #fd79a8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .industries .section-title p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .industries-showcase {
+            position: relative;
+            z-index: 10;
+        }
+
+        .industries-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(30px);
+            padding: 2.5rem 2rem;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(108,92,231,0.1) 0%, rgba(253,121,168,0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(108, 92, 231, 0.2);
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 50%, #fd79a8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .industry-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(20px);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .industry-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .industry-card:hover::before {
+            left: 100%;
+        }
+
+        .industry-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 50%, #fd79a8 100%);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .industry-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .industry-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            border-color: rgba(108, 92, 231, 0.3);
+        }
+
+        .industry-icon {
+            font-size: 3.5rem;
+            background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 50%, #fd79a8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+            display: block;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .industry-card:hover .industry-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .industry-icon::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, rgba(108,92,231,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+            transition: all 0.4s ease;
+        }
+
+        .industry-card:hover .industry-icon::after {
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(108,92,231,0.3) 0%, transparent 70%);
+        }
+
+        .industry-card h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.3;
+            transition: all 0.3s ease;
+        }
+
+        .industry-card:hover h3 {
+            color: #a29bfe;
+        }
+
+        .industry-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+            transition: all 0.3s ease;
+        }
+
+        .industry-card:hover p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .industry-specialty {
+            display: inline-block;
+            background: rgba(108, 92, 231, 0.2);
+            color: #a29bfe;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-top: 1rem;
+            border: 1px solid rgba(108, 92, 231, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .industry-card:hover .industry-specialty {
+            background: rgba(108, 92, 231, 0.3);
+            transform: scale(1.05);
+        }
+
+        .industries-cta {
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .industries-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 50%, #fd79a8 100%);
+            color: #ffffff;
+            padding: 1.5rem 3rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 15px 35px rgba(108, 92, 231, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .industries-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .industries-btn:hover::before {
+            left: 100%;
+        }
+
+        .industries-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 25px 50px rgba(108, 92, 231, 0.4);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--gradient-dark);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 30%;
+            left: -20%;
+            width: 400px;
+            height: 400px;
+            background: var(--gradient-secondary);
+            border-radius: 50%;
+            opacity: 0.1;
+            filter: blur(100px);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 2.5rem;
+            font-size: 2rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--glass-border);
+        }
+
+        .contact-item:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateX(8px);
+        }
+
+        .contact-item i {
+            font-size: 1.8rem;
+            color: var(--accent-cyan);
+            width: 40px;
+            padding: 0.75rem;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-item a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .contact-form {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow-secondary);
+        }
+
+        .contact-form h3 {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.75rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1.2rem;
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            color: var(--white);
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent-purple);
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .form-group select {
+            cursor: pointer;
+        }
+
+        .form-group select option {
+            background: var(--primary-dark);
+            color: var(--white);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-top: 0.25rem;
+        }
+
+        .checkbox-group label {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-bottom: 0;
+        }
+
+        .checkbox-group a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+        }
+
+        .checkbox-group a:hover {
+            text-decoration: underline;
+        }
+
+        .submit-btn {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-primary);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .form-status {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            display: none;
+        }
+
+        .form-status.success {
+            background: rgba(0, 184, 148, 0.2);
+            border: 1px solid var(--accent-green);
+            color: var(--accent-green);
+        }
+
+        .form-status.error {
+            background: rgba(231, 76, 60, 0.2);
+            border: 1px solid #e74c3c;
+            color: #e74c3c;
+        }
+
+        /* Footer */
+        footer {
+            background: #0d0d1a;
+            color: var(--white);
+            padding: 4rem 0 1.5rem;
+            position: relative;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-section h3 i {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #bbb;
+            text-decoration: none;
+            line-height: 1.8;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .footer-section i {
+            color: var(--accent-purple);
+            width: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(108, 92, 231, 0.3);
+        }
+
+        .social-links a i {
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #888;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .industries-stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+            }
+
+            .industries-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .industries .section-title h2 {
+                font-size: 2.5rem;
+            }
+
+            .stat-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .industry-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .industries-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-bottom: 3rem;
+            }
+
+            .industries-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .service-card,
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+
+            .contact-form {
+                padding: 2rem 1.5rem;
+            }
+
+            .industries .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .industries .section-title p {
+                font-size: 1.1rem;
+            }
+
+            .industries-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .stat-card {
+                padding: 1.5rem;
+            }
+
+            .stat-icon {
+                font-size: 2.5rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .industries-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .industry-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .industry-icon {
+                font-size: 3rem;
+            }
+
+            .industry-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .industry-card p {
+                font-size: 0.9rem;
+            }
+
+            .industries-btn {
+                padding: 1.2rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">
+                <i class="fas fa-chart-line"></i>
+                SPSquare Consultancy
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Empowering Businesses through Strategic HR Consulting</h1>
+                <p class="tagline">Transform your workforce with expert HR solutions, innovative software, and strategic policies designed for success.</p>
+                <a href="#contact" class="cta-button">
+                    <i class="fas fa-rocket"></i> Get Started Today
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <i class="fas fa-users"></i>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Core Services</h2>
+                <p>Comprehensive HR solutions tailored to meet your unique business needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <i class="fas fa-search-plus service-icon"></i>
+                    <h3>Hiring & Recruitment</h3>
+                    <p>End-to-end recruitment solutions including talent sourcing, screening, interviewing, and onboarding. We help you find the right talent that aligns with your company culture and goals.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i>Executive Search & Headhunting</li>
+                        <li><i class="fas fa-check-circle"></i>Volume Recruitment Solutions</li>
+                        <li><i class="fas fa-check-circle"></i>Technical Skills Assessment</li>
+                        <li><i class="fas fa-check-circle"></i>Cultural Fit Evaluation</li>
+                        <li><i class="fas fa-check-circle"></i>Onboarding Support</li>
+                    </ul>
+                </div>
+                <div class="service-card fade-in">
+                    <i class="fas fa-laptop-code service-icon"></i>
+                    <h3>HRM Software Solutions</h3>
+                    <p>Cutting-edge HR management software implementation and customization. Streamline your HR processes with automated systems for payroll, attendance, performance tracking, and more.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i>HRIS Implementation</li>
+                        <li><i class="fas fa-check-circle"></i>Payroll Automation</li>
+                        <li><i class="fas fa-check-circle"></i>Performance Management Systems</li>
+                        <li><i class="fas fa-check-circle"></i>Employee Self-Service Portals</li>
+                        <li><i class="fas fa-check-circle"></i>Analytics & Reporting</li>
+                    </ul>
+                </div>
+                <div class="service-card fade-in">
+                    <i class="fas fa-clipboard-check service-icon"></i>
+                    <h3>HR Policy Design</h3>
+                    <p>Comprehensive HR policy development and consultation. We create customized policies that ensure compliance, promote fair practices, and support your organizational objectives.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i>Employment Law Compliance</li>
+                        <li><i class="fas fa-check-circle"></i>Employee Handbook Creation</li>
+                        <li><i class="fas fa-check-circle"></i>Compensation & Benefits Design</li>
+                        <li><i class="fas fa-check-circle"></i>Remote Work Policies</li>
+                        <li><i class="fas fa-check-circle"></i>Diversity & Inclusion Programs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Real results from real partnerships</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">SPSquare Consultancy transformed our recruitment process completely. Their strategic approach helped us reduce hiring time by 60% while improving candidate quality significantly.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <h4>John Davis</h4>
+                            <p>CEO, TechCorp Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">The HR software implementation was seamless. Their team provided excellent support throughout the process, and the results exceeded our expectations in terms of efficiency gains.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <h4>Sarah Mitchell</h4>
+                            <p>HR Director, Global Dynamics</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">The HR software implementation was seamless. Their team provided excellent support throughout the process, and the results exceeded our expectations in terms of efficiency gains.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <h4>Sarah Mitchell</h4>
+                            <p>HR Director, Global Dynamics</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">Professional, knowledgeable, and results-driven. SPSquare's policy design services helped us create a more inclusive and productive workplace culture.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RP</div>
+                        <div class="author-info">
+                            <h4>Robert Park</h4>
+                            <p>Founder, Innovation Labs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About SPSquare Consultancy</h2>
+                <p>Your trusted partner in transforming human resources into a strategic advantage</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h3><i class="fas fa-rocket"></i>Our Mission</h3>
+                    <p>At SPSquare Consultancy, we believe that people are the cornerstone of every successful business. Our mission is to empower organizations by providing comprehensive HR solutions that drive growth, enhance productivity, and create sustainable competitive advantages.</p>
+                    <p>With years of expertise in the HR industry, we specialize in delivering customized solutions that align with your business objectives. From talent acquisition to policy development, we're here to transform your HR challenges into opportunities for success.</p>
+                </div>
+                <div class="about-stats fade-in">
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Clients Served</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-user-tie"></i>
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">HR Experts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries">
+        <div class="container">
+            <div class="section-title">
+                <h2>Industries We Transform</h2>
+                <p>Pioneering HR excellence across diverse sectors with cutting-edge solutions and unparalleled expertise</p>
+            </div>
+
+            <div class="industries-showcase">
+                <div class="industries-stats">
+                    <div class="stat-card fade-in">
+                        <i class="fas fa-industry stat-icon"></i>
+                        <span class="stat-number">19+</span>
+                        <span class="stat-label">Industry Sectors</span>
+                    </div>
+                    <div class="stat-card fade-in">
+                        <i class="fas fa-users stat-icon"></i>
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Professionals Placed</span>
+                    </div>
+                    <div class="stat-card fade-in">
+                        <i class="fas fa-trophy stat-icon"></i>
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                </div>
+
+                <div class="industries-grid">
+                    <div class="industry-card fade-in">
+                        <i class="fas fa-fighter-jet industry-icon"></i>
+                        <h3>Aerospace & Defense</h3>
+                        <p>Strategic talent acquisition for aerospace engineering, defense technologies, and aviation sectors</p>
+                        <span class="industry-specialty">High-Security Clearance</span>
+                    </div>
+
+                    <div class="industry-card fade-in">
+                        <i class="fas fa-car industry-icon"></i>
+                        <h3>Automotive</h3>
+                        <p>Specialized recruitment for automotive manufacturing, EV technologies, and autonomous systems</p>
+                        <span class="industry-specialty">EV & Smart Mobility</span>
+                    </div>
+
+                    <div class="industry-card fade-in">
+                        <i class="fas fa-shopping-cart industry-icon"></i>
+                        <h3>Consumer Goods</h3>
+                        <p>End-to-end solutions for FMCG, retail, and consumer electronics talent management</p>
+                        <span class="industry-specialty">Brand Management</span>
+                    </div>
+
+                    <div class="industry-card fade-in">
+                        <i class="fas fa-bolt industry-icon"></i>
+                        <h3>Energy & Utilities</h3>
+                        <p>Clean energy transitions, renewable technologies, and traditional power sector expertise</p>
+                        <span class="industry-specialty">Green Energy Focus</span>
+                    </div>
+
+                    <div class="industry-card fade-in">
+                        <i class="fas fa-heartbeat industry-icon"></i>
+                        <h3>Life Sciences & Healthcare</h3>
+                        <p>Biotech, pharmaceuticals, medical devices, and healthcare service professionals</p>
+                        <span class="industry-specialty">Regulatory Expertise</span>
+                    </div>
+
+                    <div class="industry-card fade-in">
+                        <i class="fas fa-microchip industry-icon"></i>
+                        <h3>Technology</h3>
+                        <p>Cutting-edge tech talent for AI, cloud computing, cybersecurity, and software development</p>
+                        <span class="industry-specialty">AI & Machine Learning</span>
+                    </div>
+
+                    <div class="industry-card fade-in">
+                        <i class="fas fa-university industry-icon"></i>
+                        <h3>Banking & Finance</h3>
+                        <p>Investment banking, commercial banking, and digital banking transformation specialists</p>
+                        <span class="industry-specialty">Digital Banking</span>
+                    </div>
+
+                    <div class="industry-card fade-in">
+                        <i class="fas fa-mobile-alt industry-icon"></i>
+                        <h3>Fintech</h3>
+                        <p>Revolutionary fintech solutions, blockchain experts, and digital payment innovations</p>
+                        <span class="industry-specialty">Blockchain & Crypto</span>
+                    </div>
+
+                    <div class="industry-card fade-in">
+                        <i class="fas fa-chart-area industry-icon"></i>
+                        <h3>Capital Markets</h3>
+                        <p>Trading, investment management, risk analysis, and quantitative finance professionals</p>
+                        <span class="industry-specialty">Algorithmic Trading</span>
+                    </div>
+
+                    <div class="industry-card fade-in">
+                        <i class="fas fa-cogs industry-icon"></i>
+                        <h3>Manufacturing</h3>
+                        <p>Smart manufacturing, Industry 4.0, automation, and lean production methodologies</p>
+                        <span class="industry-specialty">Industry 4.0</span>
+                    </div>
+
+                    <div class="industry-card fade-in">
+                        <i class="fas fa-oil-well industry-icon"></i>
+                        <h3>Oil & Gas</h3>
+                        <p>Upstream, downstream, and midstream operations with sustainability focus</p>
+                        <span class="industry-specialty">Carbon Neutral</span>
+                    </div>
+
+                    <div class="industry-card fade-in">
+                        <i class="fas fa-broadcast-tower industry-icon"></i>
+                        <h3>Telecom & Media</h3>
+                        <p>5G technologies, digital media, streaming platforms, and telecommunications infrastructure</p>
+                        <span class="industry-specialty">5G & Edge Computing</span>
+                    </div>
+
+                    <div class="industry-card fade-in">
+                        <i class="fas fa-plane industry-icon"></i>
+                        <h3>Travel & Hospitality</h3>
+                        <p>Tourism, logistics, transportation, and hospitality management excellence</p>
+                        <span class="industry-specialty">Sustainable Tourism</span>
+                    </div>
+
+                    <div class="industry-card fade-in">
+                        <i class="fas fa-store industry-icon"></i>
+                        <h3>Retail</h3>
+                        <p>Omnichannel retail, e-commerce platforms, and customer experience innovations</p>
+                        <span class="industry-specialty">Omnichannel CX</span>
+                    </div>
+
+                    <div class="industry-card fade-in">
+                        <i class="fas fa-shield-alt industry-icon"></i>
+                        <h3>Risk & Compliance</h3>
+                        <p>Financial crime prevention, regulatory compliance, and risk management frameworks</p>
+                        <span class="industry-specialty">RegTech Solutions</span>
+                    </div>
+
+                    <div class="industry-card fade-in">
+                        <i class="fas fa-umbrella industry-icon"></i>
+                        <h3>Insurance</h3>
+                        <p>InsurTech innovations, actuarial science, and digital insurance transformations</p>
+                        <span class="industry-specialty">InsurTech & AI</span>
+                    </div>
+
+                    <div class="industry-card fade-in">
+                        <i class="fas fa-landmark industry-icon"></i>
+                        <h3>Public Sector</h3>
+                        <p>Government agencies, public administration, and civic technology implementations</p>
+                        <span class="industry-specialty">Digital Government</span>
+                    </div>
+
+                    <div class="industry-card fade-in">
+                        <i class="fas fa-mountain industry-icon"></i>
+                        <h3>Mining & Resources</h3>
+                        <p>Sustainable mining practices, mineral exploration, and environmental stewardship</p>
+                        <span class="industry-specialty">Sustainable Mining</span>
+                    </div>
+                </div>
+
+                <div class="industries-cta">
+                    <a href="#contact" class="industries-btn">
+                        <i class="fas fa-rocket"></i>
+                        Explore Industry Solutions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Get In Touch</h2>
+                <p style="color: #ccc;">Ready to transform your HR processes? Let's discuss your needs</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:xyz@gmail.com">xyz@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Phone:</strong><br>
+                            <a href="tel:+1234567890">+1 (234) 567-8900</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Address:</strong><br>
+                            123 Business District, Corporate Plaza<br>
+                            Suite 456, Business City, BC 12345
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <strong>LinkedIn:</strong><br>
+                            <a href="https://linkedin.com/company/spsquare-consultancy" target="_blank">linkedin.com/company/spsquare-consultancy</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- WEB3FORMS CONTACT FORM - INSTANT SETUP -->
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <!-- YOUR WEB3FORMS ACCESS KEY -->
+                    <input type="hidden" name="access_key" value="10a67b7e-f1e5-4ab6-9fd2-bc4c876a4e4f">
+                    <input type="hidden" name="subject" value="🔥 New Contact Form Submission - SPSquare Consultancy">
+                    <input type="hidden" name="from_name" value="SPSquare Consultancy Website">
+                    <input type="hidden" name="redirect" value="http://localhost:8000/thank-you.html">
+                    
+                    <h3>Send Us a Message</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first_name">First Name *</label>
+                            <input type="text" id="first_name" name="first_name" required placeholder="Enter your first name">
+                        </div>
+                        <div class="form-group">
+                            <label for="last_name">Last Name *</label>
+                            <input type="text" id="last_name" name="last_name" required placeholder="Enter your last name">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company" placeholder="Enter your company name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service_interest">
+                            <option value="">Select a service...</option>
+                            <option value="Hiring & Recruitment">Hiring & Recruitment</option>
+                            <option value="HRM Software Solutions">HRM Software Solutions</option>
+                            <option value="HR Policy Design">HR Policy Design</option>
+                            <option value="HR Consulting">HR Consulting</option>
+                            <option value="Multiple Services">Multiple Services</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your HR needs and how we can help..." required></textarea>
+                    </div>
+                    
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="consent" name="privacy_consent" value="agreed" required>
+                        <label for="consent">
+                            I agree to the <a href="#" target="_blank">Privacy Policy</a> and consent to being contacted by SPSquare Consultancy regarding my inquiry.
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    
+                    <div class="form-status" id="formStatus"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-building"></i>SPSquare Consultancy</h3>
+                    <p>Empowering businesses through strategic HR consulting. We provide comprehensive solutions that drive growth and enhance organizational success.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-link"></i>Quick Links</h3>
+                    <p><a href="#home"><i class="fas fa-home"></i>Home</a></p>
+                    <p><a href="#about"><i class="fas fa-info-circle"></i>About Us</a></p>
+                    <p><a href="#services"><i class="fas fa-cogs"></i>Services</a></p>
+                    <p><a href="#contact"><i class="fas fa-envelope"></i>Contact</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-briefcase"></i>Services</h3>
+                    <p><a href="#services"><i class="fas fa-search-plus"></i>Hiring & Recruitment</a></p>
+                    <p><a href="#services"><i class="fas fa-laptop-code"></i>HRM Software Solutions</a></p>
+                    <p><a href="#services"><i class="fas fa-clipboard-check"></i>HR Policy Design</a></p>
+                    <p><a href="#services"><i class="fas fa-handshake"></i>HR Consulting</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-address-card"></i>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> xyz@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (234) 567-8900</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Business City, BC 12345</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri 9AM-6PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SPSquare Consultancy. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.90)';
+                header.style.backdropFilter = 'blur(20px)';
+                header.style.borderBottom = '1px solid rgba(108, 92, 231, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(20px)';
+                header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in class
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle (basic implementation)
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'white';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.padding = '1rem';
+                navLinks.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Enhanced form submission handling
+        const contactForm = document.querySelector('.contact-form');
+        const submitBtn = document.getElementById('submitBtn');
+        const formStatus = document.getElementById('formStatus');
+
+        contactForm.addEventListener('submit', function(e) {
+            // Show loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            // Hide any previous status messages
+            if (formStatus) {
+                formStatus.style.display = 'none';
+            }
+            
+            // Form will be submitted by FormSubmit
+            // The button will be re-enabled after the page redirects or reloads
+        });
+
+        // Handle form validation
+        const requiredFields = contactForm.querySelectorAll('[required]');
+        requiredFields.forEach(field => {
+            field.addEventListener('invalid', function(e) {
+                e.preventDefault();
+                this.style.borderColor = '#e74c3c';
+                
+                // Custom validation messages
+                if (this.type === 'email') {
+                    this.setCustomValidity('Please enter a valid email address');
+                } else if (this.type === 'checkbox') {
+                    this.setCustomValidity('Please accept the privacy policy');
+                } else {
+                    this.setCustomValidity('This field is required');
+                }
+            });
+
+            field.addEventListener('input', function() {
+                this.style.borderColor = 'var(--glass-border)';
+                this.setCustomValidity('');
+            });
+        });
+
+        // Phone number formatting (optional)
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 6) {
+                value = value.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+            } else if (value.length >= 3) {
+                value = value.replace(/(\d{3})(\d{1,3})/, '($1) $2');
+            }
+            e.target.value = value;
+        });
+
+        // Add loading animation for statistics
+        const animateStats = () => {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const finalValue = stat.textContent;
+                const numValue = parseInt(finalValue.replace(/\D/g, ''));
+                const suffix = finalValue.replace(/\d/g, '');
+                let currentValue = 0;
+                const increment = numValue / 30;
+
+                const timer = setInterval(() => {
+                    currentValue += increment;
+                    if (currentValue >= numValue) {
+                        stat.textContent = finalValue;
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(currentValue) + suffix;
+                    }
+                }, 50);
+            });
+        };
+
+        // Trigger stats animation when about section is visible
+        const aboutSection = document.querySelector('.about');
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statsObserver.observe(aboutSection);
+
+        // Add subtle parallax effect to hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero-visual');
+            const speed = scrolled * 0.5;
+
+            if (parallax) {
+                parallax.style.transform = `translateY(calc(-50% + ${speed}px))`;
+            }
+        });
+    </script>
+</body>
+</html>
